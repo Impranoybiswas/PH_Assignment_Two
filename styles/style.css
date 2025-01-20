@@ -25,8 +25,8 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 10rem;
-  margin-bottom: 20px;
+  margin: 1.5rem 11rem;
+  margin-bottom: 10px;
 }
 .head {
   display: flex;
@@ -34,7 +34,7 @@ main {
   align-content: center;
 }
 .head h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
 }
 .head img {
@@ -44,12 +44,13 @@ nav li {
   display: inline-block;
   margin: auto 10px;
   font-weight: 500;
+  font-size: 1.2rem;
 }
 nav li:hover {
   border-bottom: 2px solid var(--orange-color);
 }
 nav li:nth-child(1) a {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--orange-color);
 }
 nav li:nth-child(2) a {
@@ -63,9 +64,9 @@ nav li:nth-child(4) a {
 }
 nav button {
   background-color: var(--orange-color);
-  padding: 8px 30px;
+  padding: 8px 40px;
   border-radius: 10px;
-
+  font-size: 1.2rem;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -82,30 +83,93 @@ nav button:hover {
   display: none;
   font-size: 24px;
 }
-@media only screen and (min-width: 601px) and (max-width: 920px) {
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+}
+.header_content img {
+  max-width: 420px;
+}
+.left_header h2 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.left_header h2 .orange {
+  color: var(--orange-color);
+}
+.left_header h2 .blue {
+  color: var(--blue-color);
+}
+.left_header p {
+  font-size: 1.2rem;
+  text-align: justify;
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+.dark_button {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 10px 50px;
+  border-radius: 10px;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+.dark_button:hover {
+  background-color: var(--orange-color);
+}
+@media only screen and (min-width: 601px) and (max-width: 1000px) {
   nav,
   header,
   main {
-    padding: 1rem 3rem;
+    margin: 0;
     flex-direction: column;
-    gap: 30px;
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .header_content {
+    flex-direction: row;
+    padding: 2rem;
+  }
+  .header_content h2 {
+    font-size: 2.5rem;
+  }
+  .header_content img {
+    width: 280px;
   }
 }
 @media only screen and (max-width: 600px) {
   nav,
   header,
   main {
-    padding: 1rem;
+    margin: 0;
   }
   nav h1,
   nav ul,
   nav button {
     display: none;
   }
+  section {
+    margin: 1rem;
+  }
   nav {
+    padding: 1rem;
     box-shadow: -3px -4px 10px 0px var(--dark-color);
   }
   .contact i {
     display: block;
+  }
+  .header_content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .header_content img {
+    width: 100%;
+  }
+  .header_content h2 {
+    font-size: 2.4rem;
   }
 }
