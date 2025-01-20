@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", serif;
+  color: var(--dark-color);
+}
+:root {
+  --orange-color: rgb(254, 163, 1);
+  --blue-color: rgb(1, 172, 253);
+  --dark-color: rgb(24, 24, 24);
+  --light-color: rgb(242, 242, 242);
+}
+button,
+a {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
+nav,
+header,
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10rem;
+  margin-bottom: 20px;
+}
+.head {
+  display: flex;
+  gap: 8px;
+  align-content: center;
+}
+.head h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.head img {
+  height: 45px;
+}
+nav li {
+  display: inline-block;
+  margin: auto 10px;
+  font-weight: 500;
+}
+nav li:hover {
+  border-bottom: 2px solid var(--orange-color);
+}
+nav li:nth-child(1) a {
+  font-weight: 600;
+  color: var(--orange-color);
+}
+nav li:nth-child(2) a {
+  color: var(--blue-color);
+}
+nav li:nth-child(3) a {
+  color: #05d4df;
+}
+nav li:nth-child(4) a {
+  color: #5d58ef;
+}
+nav button {
+  background-color: var(--orange-color);
+  padding: 8px 30px;
+  border-radius: 10px;
+
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+nav button a {
+  color: #ffffff;
+}
+nav button:hover {
+  background-color: var(--blue-color);
+}
+.contact i {
+  display: none;
+  font-size: 24px;
+}
+@media only screen and (min-width: 601px) and (max-width: 920px) {
+  nav,
+  header,
+  main {
+    padding: 1rem 3rem;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  nav,
+  header,
+  main {
+    padding: 1rem;
+  }
+  nav h1,
+  nav ul,
+  nav button {
+    display: none;
+  }
+  nav {
+    box-shadow: -3px -4px 10px 0px var(--dark-color);
+  }
+  .contact i {
+    display: block;
+  }
+}
