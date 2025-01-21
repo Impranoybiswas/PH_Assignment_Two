@@ -40,7 +40,7 @@ main {
 .head {
   display: flex;
   gap: 8px;
-  align-content: center;
+  align-items: center;
 }
 .head h1 {
   font-size: 2.5rem;
@@ -57,9 +57,6 @@ nav li a {
   font-weight: 500;
   font-size: 1.2rem;
 }
-nav li a:hover {
-  font-weight: 800;
-}
 nav li:nth-child(1) a {
   font-weight: 700;
   color: var(--orange-color);
@@ -72,6 +69,10 @@ nav li:nth-child(3) a {
 }
 nav li:nth-child(4) a {
   color: #5d58ef;
+}
+nav li a:hover {
+  color: var(--orange-color);
+  transform: scale(110%);
 }
 nav button {
   background-color: var(--orange-color);
@@ -103,7 +104,7 @@ marquee div {
   gap: 10px;
 }
 marquee img {
-  height: 20px;
+  height: 24px;
 }
 marquee p {
   font-size: 1.2rem;
@@ -188,9 +189,11 @@ header {
 }
 .card p {
   margin-bottom: 30px;
+  opacity: 0.8;
 }
 .card button {
   background: none;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 #card_1 {
@@ -381,6 +384,7 @@ footer {
   color: var(--orange-color);
   font-weight: 900;
 }
+
 .footer_content3 ul {
   display: flex;
   gap: 14px;
@@ -395,6 +399,7 @@ footer {
   border-radius: 5px;
   background-color: #01acfd;
   border: 2px solid #ffffff;
+  transform: all 0.4s ease 0s;
 }
 .footer_content3 i {
   color: #ffffff;
@@ -479,7 +484,7 @@ footer {
   }
   section,
   marquee {
-    margin: 0.5rem 1rem;
+    margin: 0.5rem;
   }
   nav {
     padding: 1rem;
@@ -515,7 +520,7 @@ footer {
   }
   .story_grid {
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
   }
 
   #grid1 {
@@ -539,7 +544,6 @@ footer {
     font-size: 0.6rem;
     padding: 5px 8px;
     display: block;
-    width: 50%;
     text-align: center;
     left: 0;
     margin: auto;
