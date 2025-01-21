@@ -19,6 +19,9 @@ a {
 a {
   text-decoration: none;
 }
+li {
+  list-style-type: none;
+}
 nav,
 header,
 main {
@@ -90,6 +93,26 @@ nav button:hover {
 .contact i {
   display: none;
   font-size: 24px;
+}
+marquee {
+  margin: 0 12rem;
+}
+marquee div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+marquee img {
+  height: 20px;
+}
+marquee p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: inline;
+}
+marquee span {
+  font-weight: 800;
+  color: var(--orange-color);
 }
 header {
   padding-bottom: 0;
@@ -256,26 +279,48 @@ header {
   border-radius: 12px 12px 0 0;
   width: 100%;
 }
+.grid span {
+  position: relative;
+  bottom: 24px;
+  left: 5%;
+  z-index: 1;
+  background-color: #fd5901;
+  padding: 10px 24px;
+  font-weight: 500;
+  border-radius: 100px;
+  color: #ffffff;
+  display: inline-block;
+  width: fit-content;
+  margin: auto;
+}
+#grid1 span {
+  background-color: #5d58ef;
+}
+#grid2 span {
+  background-color: #95b226;
+}
+#grid3 span {
+  background-color: #1f7ae9;
+}
+#grid5 span {
+  background-color: #d5119e;
+}
+#grid6 span {
+  background-color: #770cf1;
+}
 .grid h3 {
   font-size: 1.1rem;
-  margin: 24px 20px;
+  margin: 0 20px;
+  margin-bottom: 20px;
 }
-.grid p {
-  margin: 20px;
-}
+
 #grid1 h3 {
   margin-top: 40px;
   font-size: 1.3rem;
 }
 #grid1 p {
-  margin-top: 40px;
+  margin: 30px 20px;
   text-align: justify;
-}
-#grid1 button {
-  margin: 20px 20px;
-  background: none;
-  color: var(--orange-color);
-  font-weight: 600;
 }
 
 #grid1 {
@@ -380,6 +425,9 @@ footer {
     gap: 24px;
     margin-top: 20px;
   }
+  marquee {
+    margin: 0 2rem;
+  }
   .header_content {
     flex-direction: row;
     padding: 2rem;
@@ -429,8 +477,9 @@ footer {
   nav button {
     display: none;
   }
-  section {
-    margin: 1rem;
+  section,
+  marquee {
+    margin: 0.5rem 1rem;
   }
   nav {
     padding: 1rem;
@@ -461,6 +510,9 @@ footer {
   .card h3 {
     font-size: 1.4rem;
   }
+  .pager {
+    display: none;
+  }
   .story_grid {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -477,16 +529,26 @@ footer {
   #grid1 h3,
   .grid h3 {
     font-size: 0.8rem;
-    margin: 20px 10px;
+    margin: 10px;
     text-align: center;
   }
   #grid6 {
     display: block;
   }
+  .grid span {
+    font-size: 0.6rem;
+    padding: 5px 8px;
+    display: block;
+    width: 50%;
+    text-align: center;
+    left: 0;
+    margin: auto;
+    bottom: 15px;
+  }
   footer {
     padding: 4rem 1rem;
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 70px;
   }
   .footer_content1 {
     grid-column: unset;
